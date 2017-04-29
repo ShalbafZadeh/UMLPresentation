@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 964px;
+        }
+        .style2
+        {
+            width: 963px;
+            text-align: right;
+        }
+        </style>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <table style="width: 100%;">
+        <tr>
+            <td style="text-align: center" dir="rtl">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/PIC/Header.JPG" 
+                    Width="1251px" />
+            </td>
+        </tr>
+        </table>
+    <body bgcolor="lightblue"></body>
+    <div>
+        <table style="width:100%;">
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td class="style2" dir="rtl">
+    <asp:Menu ID="Menu1" runat="server" BackColor="LightBlue" 
+        DynamicHorizontalOffset="2" Font-Names="tahoma" Font-Size="Small" 
+        ForeColor="#284E98" onmenuitemclick="Menu1_MenuItemClick" 
+        Orientation="Horizontal" StaticSubMenuIndent="10px" style="text-align: center">
+        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+        <DynamicMenuStyle BackColor="#B5C7DE" />
+        <DynamicSelectedStyle BackColor="#507CD1" />
+        <Items>
+            <asp:MenuItem Text="صفحه اصلی" Value="صفحه اصلی" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="ورود اعضا" Value="ورود اعضا" 
+                NavigateUrl="~/Enter_Page.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="عضویت" Value="عضویت" NavigateUrl="~/Ozviat_Page.aspx"></asp:MenuItem>
+        </Items>
+        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+        <StaticSelectedStyle BackColor="#507CD1" />
+    </asp:Menu>
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            </table>
+    </div>
+    <p>
+                <table style="width:100%;">
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td class="style1" dir="rtl">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                </table>
+    </p>
+    <p>
+        <table style="width:100%;">
+            <tr>
+                <td align="center">
+                <asp:Image ID="Image2" runat="server" ImageUrl="~/PIC/Footer.JPG" 
+                        style="text-align: center" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <asp:Label ID="Label1" runat="server" Font-Names="tahoma" Font-Size="Small" 
+            ForeColor="#000066" 
+            Text="All Right Reserved&lt;br&gt;Alireza Shamsi "></asp:Label>
+                </td>
+            </tr>
+        </table>
+    </p>
+    </form>
+    </body>
+</html>
